@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/docker_scheduler.iml" filepath="$PROJECT_DIR$/docker_scheduler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/schclient/schclient.iml" filepath="$PROJECT_DIR$/schclient/schclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/schserver/schserver.iml" filepath="$PROJECT_DIR$/schserver/schserver.iml" />
+    </modules>
+  </component>
+</project>

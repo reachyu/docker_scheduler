@@ -1,0 +1,41 @@
+syntax = "proto3"; // 使用protobuf版本3
+
+option go_package = "./go_docker"; // 生成的.pb.go的文件存放目录，这里是相对路径，也可以用绝对路径
+package apis;  //.proto文件所在目录
+
+import "google/protobuf/empty.proto";
+
+// The greeting service definition.
+service ContainerService {
+    // Sends a greeting
+    rpc RunContainer(ReqImageInfo) returns (RunResponse) {}
+
+    rpc StopContainer(ReqContainerInfo) returns (StopResponse) {}
+
+    rpc DeleteContainer(ReqContainerInfo) returns (DeleteResponse) {}
+
+    // ListContainers方法不传参也不返回值
+    rpc ListContainers (google.protobuf.Empty) returns (google.protobuf.Empty) {}
+}
+
+// The request message containing the user's name.
+message ReqContainerInfo {
+    string containerId = 1;
+}
+
+message ReqImageInfo {
+    string imageName = 1;
+}
+
+// The response message containing the greetings
+message RunResponse {
+    string message = 1;
+}
+
+message StopResponse {
+    string message = 1;
+}
+
+message DeleteResponse {
+    string message = 1;
+}
